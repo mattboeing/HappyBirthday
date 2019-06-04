@@ -1,0 +1,41 @@
+﻿.mattStyle-label {
+    float: left;
+    /*width: 30px;*/
+    text-align: right;
+    font-weight: 400;
+    margin: 0 10px 0 10px;
+    color: gray;
+}
+
+.mattStyle-input[type=text] {
+    width: 200px;
+    margin: 0 0 0 10px;    
+}
+
+.mattStyle-H1 {
+    background-color:black;
+    color:gray;
+    font-weight:bold;
+}
+
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+/*.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}*/
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: black;
+}
+
+.validation-summary-valid {
+    display: none;
+}

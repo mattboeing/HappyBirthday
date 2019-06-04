@@ -1,0 +1,52 @@
+﻿@model HappyBirthday.Models.BirthdayInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <style>
+        .btn a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="mattStyle-H1">
+        Birthday Card Generator
+    </h1>
+    <h1 style="font-weight:bold">
+        Birthday Card Sent
+    </h1>
+    @using (Html.BeginForm())
+    {        
+        <p>
+            <div style="color:gray">
+                <label>From: @Model.FromName</label>
+            </div>
+        </p>
+        <p>
+            <div style="color:gray">
+                <label>To: @Model.ToName</label>
+            </div>
+        </p>
+        <p>
+            <div style="color:gray">
+                <label>Message: @Model.Message</label>
+            </div>
+        </p>
+    }
+</body>
+</html>

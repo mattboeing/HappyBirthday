@@ -1,0 +1,60 @@
+﻿@model HappyBirthday.Models.BirthdayInfo
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <style>
+        .btn a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: white;            
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1 class="mattStyle-H1">
+        Birthday Card Generator
+    </h1>
+    <h1 style="font-weight:bold">
+        Send a Birthday Card
+    </h1>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>
+            <div class=" mattStyle-label">
+                <label>From: </label>
+            </div>
+            @Html.TextBoxFor(t => t.FromName, new { @class = "form-control", maxlength = 30, style = "width:200px;" })
+
+        </p>
+        <p>
+            <div class=" mattStyle-label">
+                <label>To: </label>
+            </div>
+            @Html.TextBoxFor(t => t.ToName, new { @class = "form-control", maxlength = 30, style = "width:200px;" })
+        </p>
+        <p>
+            <div class=" mattStyle-label">
+                <label>Message: </label>
+            </div>
+            @Html.TextBoxFor(t => t.Message, new { @class = "form-control", maxlength = 200, style = "width:200px;" })
+        </p>
+
+        <input class="btn btn-success" type="submit" value="Send Card" />
+    }
+</body>
+</html>
